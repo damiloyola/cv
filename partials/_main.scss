@@ -1,0 +1,173 @@
+main {
+  /***** SOBRE MI ********/
+  .about {
+    width: 100%;
+    overflow: auto;
+    background-color: $light;
+    padding: $size-xxl;
+
+    .about__left {
+      width: 50%;
+      float: left;
+      padding: $size-xxl;
+
+      .about__img {
+        margin: $size-xxl auto;
+        width: 300px;
+        height: 300px;
+        border: $size-m solid $mid;
+        border-radius: 50%;
+        object-fit: cover;
+
+        background-image: linear-gradient(
+            rgba(48, 227, 202, 0.2),
+            rgba(48, 227, 202, 0.2)
+          ),
+          url("img/yo.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+    .about__right {
+      width: 50%;
+      float: right;
+      height: 100%;
+      h2,
+      p {
+        margin-left: 0;
+        margin-bottom: $size-l;
+        text-align: justify;
+      }
+      .logos {
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+        background-image: url("img/js.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  /****** PROYECTOS ********/
+
+  .projects {
+    background-color: $mid;
+    width: 100%;
+    overflow: auto;
+    padding: $size-xxl;
+    text-align: center;
+    .projects__project {
+      position: relative;
+      text-align: justify;
+      padding: $size-l;
+      width: 30%;
+      float: left;
+      margin: 0 $size-m;
+      border: 5px solid $light;
+      transition: 0.2s;
+      box-shadow: 10px 10px 0px -1px rgba(64, 81, 78, 0.75);
+      &:hover {
+        top: 5px;
+        left: 5px;
+        box-shadow: none;
+        cursor: pointer;
+      }
+
+      .projects__img {
+        display: block;
+        width: 85%;
+        margin: 0 auto;
+        border: 10px solid $light;
+      }
+    }
+  }
+
+  /***** CONTACTO*********/
+  .contact {
+    width: 100%;
+    text-align: center;
+    padding: $size-xxl;
+    background-color: $light;
+    overflow: auto;
+    .contact__social {
+      width: 50%;
+      float: left;
+      padding: $size-xl;
+      .social {
+        width: 50%;
+        float: right;
+        padding: $size-l;
+
+        img {
+          width: 60%;
+          padding: $size-xl;
+          min-width: 30px;
+          transition: 0.5s;
+          &:hover {
+            cursor: pointer;
+            padding: $size-m;
+          }
+        }
+      }
+    }
+    .contact__form {
+      width: 50%;
+      float: right;
+      padding: $size-l;
+      form {
+        margin-top: $size-xl;
+        padding: $size-m;
+        background-color: $mid;
+        border: 10px solid $dark;
+
+        label {
+          text-align: left;
+          display: block;
+          width: 70%;
+          margin: 0 auto;
+          margin-bottom: $size-m;
+        }
+        input,
+        textarea {
+          display: block;
+          width: 70%;
+          margin: 0 auto;
+          padding: $size-s;
+          margin-bottom: $size-m;
+          background-color: $light;
+          border: none;
+
+          &[type="submit"] {
+            position: relative;
+            margin-top: $size-xxl;
+            padding: $size-m;
+            background-color: $dark;
+            color: $light;
+            box-shadow: 5px 5px 0px -1px rgba(64, 81, 78, 0.75);
+            &:hover {
+              top: 2px;
+              left: 2px;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/******FOOTER *****/
+
+footer {
+  background-color: $mid;
+  text-align: center;
+  margin: 0;
+  padding: $size-m;
+  border-top: 5px solid $dark;
+  p {
+    margin: 0;
+  }
+}
